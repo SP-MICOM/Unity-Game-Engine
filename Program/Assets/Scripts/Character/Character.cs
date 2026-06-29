@@ -1,4 +1,5 @@
 using Photon.Pun;
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
@@ -6,6 +7,15 @@ using UnityEngine.Animations;
 public class Character : MonoBehaviourPun
 {
     [SerializeField] Vector3 direction = new Vector3();
+    [SerializeField] float speed;
+    [SerializeField] Rigidbody rigidbody;
+    [SerializeField] Rotation rotation;
+
+    private void Awake()
+    {
+        rigidbody = GetComponent<Rigidbody>();
+        rotation = GetComponent<Rotation>();
+    }
 
     private void Start()
     {
@@ -14,12 +24,20 @@ public class Character : MonoBehaviourPun
 
     private void Update()
     {
-        Control();
+        if (photonView.IsMine)
+        {
+            Control();
+        }
     }
 
     private void FixedUpdate()
     {
-        Move();
+        if (photonView.IsMine)
+        {
+            Move();
+
+            rotation.RotateY(rigidbody);
+        }
     }
 
     void Control()
@@ -33,9 +51,7 @@ public class Character : MonoBehaviourPun
 
     void Move()
     {
-        Rigidbody rigidbody = GetComponent<Rigidbody>();
-
-        rigidbody.MovePosition(direction);
+        rigidbody.MovePosition(rigidbody.position + rigidbody.transform.TransformDirection(direction) * speed * Time.fixedDeltaTime);
     }
 
     private void DisableCamera()
