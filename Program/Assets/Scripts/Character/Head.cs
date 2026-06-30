@@ -17,6 +17,6 @@ public class Head : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        
+        rotation.RotateX(minimumAngle, maximumAngle);
     }
 }

@@ -405,6 +405,50 @@ PrefabInstance:
       addedObject: {fileID: 1055913739}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e6d008db872d0b44a126e15d3eee098, type: 3}
+--- !u!1 &918507162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918507164}
+  - component: {fileID: 918507163}
+  m_Layer: 0
+  m_Name: MouseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &918507163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918507162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f836d3695ea3f6f46a27190669d08996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseManager
+--- !u!4 &918507164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918507162}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978066273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,3 +1190,4 @@ SceneRoots:
   - {fileID: 1349280318}
   - {fileID: 1243767626}
   - {fileID: 978066275}
+  - {fileID: 918507164}
