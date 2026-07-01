@@ -3,6 +3,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviourPun
 {
@@ -10,11 +11,13 @@ public class Character : MonoBehaviourPun
     [SerializeField] float speed;
     [SerializeField] Rigidbody rigidbody;
     [SerializeField] Rotation rotation;
-
+    [SerializeField] Animator animator;
+    
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
         rotation = GetComponent<Rotation>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -44,6 +47,12 @@ public class Character : MonoBehaviourPun
     {
         direction.x = Input.GetAxis("Horizontal");
         direction.z = Input.GetAxis("Vertical");
+
+        if (direction.x > 0 || direction.z > 0)
+        {
+            animator.SetInteger("X", (int)direction.x);
+            animator.SetInteger("Y", (int)direction.z);
+        }
 
         direction.Normalize();
 
