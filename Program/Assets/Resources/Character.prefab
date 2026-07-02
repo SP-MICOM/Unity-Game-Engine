@@ -937,6 +937,7 @@ GameObject:
   - component: {fileID: 6746544136867252269}
   - component: {fileID: 3079816209766759815}
   - component: {fileID: 9186295883124191376}
+  - component: {fileID: 2489199523681413074}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -1005,6 +1006,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 6746544136867252269}
   - {fileID: 3079816209766759815}
+  - {fileID: 2489199523681413074}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1024,6 +1026,7 @@ MonoBehaviour:
   speed: 5
   rigidbody: {fileID: 0}
   rotation: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!54 &301311039278871546
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1122,6 +1125,30 @@ MonoBehaviour:
   mouseY: 0
   axis: 0
   speed: 150
+--- !u!114 &2489199523681413074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590926762922687271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PhotonUnityNetworking::Photon.Pun.PhotonAnimatorView
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 3
+    SynchronizeType: 1
+    Name: X
+  - Type: 3
+    SynchronizeType: 1
+    Name: Y
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &8341788247673560789
 GameObject:
   m_ObjectHideFlags: 0
