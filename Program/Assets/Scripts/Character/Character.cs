@@ -12,7 +12,7 @@ public class Character : MonoBehaviourPun
     [SerializeField] Rigidbody rigidbody;
     [SerializeField] Rotation rotation;
     [SerializeField] Animator animator;
-    
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -29,9 +29,13 @@ public class Character : MonoBehaviourPun
     {
         if (photonView.IsMine)
         {
+            rotation.RotateY(rigidbody);
+
             Control();
 
             Animate();
+
+            Pause();
         }
     }
 
@@ -40,8 +44,6 @@ public class Character : MonoBehaviourPun
         if (photonView.IsMine)
         {
             Move();
-
-            rotation.RotateY(rigidbody);
         }
     }
 
@@ -78,6 +80,16 @@ public class Character : MonoBehaviourPun
             eyes.GetComponent<AudioListener>().gameObject.SetActive(false);
 
             eyes.gameObject.SetActive(false);
+        }
+    }
+
+    void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PanelManager.Instance.Open(Panel.Pause);
+
+            MouseManager.Instance.SetMouse(true);
         }
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3652475460169196815}
   - component: {fileID: 4442677247783811223}
   m_Layer: 5
-  m_Name: Close Button
+  m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,6 +133,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8042203986614603559}
+        m_TargetAssemblyTypeName: PausePanel, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &944448186784482283
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +157,7 @@ GameObject:
   - component: {fileID: 7503010653207025883}
   - component: {fileID: 5063019043488939981}
   - component: {fileID: 5951823089817301912}
+  - component: {fileID: 8042203986614603559}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -235,6 +248,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8042203986614603559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944448186784482283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a478efa3e4edbe42844894e70628825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PausePanel
 --- !u!1 &1320944438967190716
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +393,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8042203986614603559}
+        m_TargetAssemblyTypeName: PausePanel, Assembly-CSharp
+        m_MethodName: Continue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1641148287013652321
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +470,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: C L O S E
+  m_text: Q U I T
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b633915a7eab00342a258e5c2f50a75f, type: 2}
   m_sharedMaterial: {fileID: -5571592025542048100, guid: b633915a7eab00342a258e5c2f50a75f, type: 2}
@@ -536,8 +573,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8063907503252376617}
-  - {fileID: 7142489622144907114}
   - {fileID: 3567316033439991390}
+  - {fileID: 7142489622144907114}
   m_Father: {fileID: 305976552875128485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
