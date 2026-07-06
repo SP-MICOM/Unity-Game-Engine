@@ -9,6 +9,14 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     private Dictionary<string, GameObject> dictionary = new Dictionary<string, GameObject>();
 
+    public override void OnConnectedToMaster()
+    {
+        if(PhotonNetwork.InLobby == false)
+        {
+            PhotonNetwork.JoinLobby();
+        }
+    }
+
     public void Open()
     {
         PanelManager.Instance.Open(Panel.Room);
