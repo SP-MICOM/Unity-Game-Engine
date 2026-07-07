@@ -314,8 +314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2346432d28e27ad4293bb31204319c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotation
-  mouseX: 0
-  mouseY: 0
   axis: 0
   speed: 600
 --- !u!114 &4197230301776170201
@@ -1121,10 +1119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2346432d28e27ad4293bb31204319c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotation
-  mouseX: 0
-  mouseY: 0
   axis: 0
-  speed: 600
+  speed: 7.5
 --- !u!114 &2489199523681413074
 MonoBehaviour:
   m_ObjectHideFlags: 0

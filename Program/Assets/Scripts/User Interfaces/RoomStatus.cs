@@ -19,6 +19,11 @@ public class RoomStatus : MonoBehaviourPunCallbacks
         button.onClick.AddListener(() => PhotonNetwork.JoinRoom(data.Name));
     }
 
+    public override void OnCreateRoomFailed(short returnCode, string message)
+    {
+        PanelManager.Instance.Open(Panel.Error, message);
+    }
+
     public void Refresh(RoomInfo roomInfo, int index)
     {
         data.Name = roomInfo.Name;
